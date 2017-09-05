@@ -30,7 +30,7 @@
 				<?php if ( is_front_page() ) { ?>
 				<div class="col half">
 					<div class="block credits">
-						<a href="http://vanderwijk.nl" title="VanderWijk WebWorks" rel="external">VanderWijk WebWorks</a>
+					<?php _e('Fran WordPress theme by', 'fran'); ?> <a href="https://thewebworks.nl" title="The Web Works" rel="external">The Web Works</a>
 					</div>
 				</div>
 				<?php } ?>

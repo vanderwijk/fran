@@ -56,5 +56,4 @@ Website development by VanderWijk Consultancy - http://vanderwijk.nl
 			</div>
 		</div>
 	</header>
-<?php if ( ! dynamic_sidebar( 'intro' ) ) : endif ?>
 	<div class="main" role="main">

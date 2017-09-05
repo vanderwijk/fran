@@ -8,12 +8,12 @@
 		</a>
 	</li>
 	<li>
-		<a href="http://twitter.com/home?status=<?php the_title_attribute(); ?>%20<?php the_permalink(); ?>" title="<?php _e( 'Share this on Twitter', 'fran'); ?>" rel="external nofollow" onClick="ga('send', 'event', 'share', 'twitter');" class="icon twitter">
+		<a href="https://twitter.com/home?status=<?php the_title_attribute(); ?>%20<?php the_permalink(); ?>" title="<?php _e( 'Share this on Twitter', 'fran'); ?>" rel="external nofollow" onClick="ga('send', 'event', 'share', 'twitter');" class="icon twitter">
 			<?php _e( 'Twitter', 'fran'); ?>
 		</a>
 	</li>
 	<li>
-		<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>&amp;title=<?php the_title_attribute(); ?>" title="<?php _e( 'Share this on Linkedin', 'fran'); ?>" rel="external nofollow" onClick="ga('send', 'event', 'share', 'linkedin');" class="icon linkedin">
+		<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>&amp;title=<?php the_title_attribute(); ?>" title="<?php _e( 'Share this on Linkedin', 'fran'); ?>" rel="external nofollow" onClick="ga('send', 'event', 'share', 'linkedin');" class="icon linkedin">
 			<?php _e( 'Linkedin', 'fran'); ?>
 		</a>
 	</li>

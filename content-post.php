@@ -1,4 +1,4 @@
-<?php if ( is_archive() || is_home() ) { // Archive ?>
+<?php if ( is_archive() || is_home() || is_search() ) { // Archive ?>
 
 			<div class="col one-third">
 				<div <?php post_class( 'block' ); ?>>

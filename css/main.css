@@ -272,7 +272,8 @@ ul.header .nav .focus > ul,
 	transition: box-shadow 500ms ease-in-out;
 }
 .home .content .one-third .block,
-.archive .content .one-third .block {
+.archive .content .one-third .block,
+.search .content .one-third .block {
 	padding: 0;
 }
 .one-third .block img {
@@ -443,21 +444,27 @@ ul.header .nav .focus > ul,
 .home .one-third .block .entry-footer,
 .archive .one-third .block .entry-title,
 .archive .one-third .block .entry-content,
-.archive .one-third .block .entry-footer {
+.archive .one-third .block .entry-footer,
+.search .one-third .block .entry-title,
+.search .one-third .block .entry-content,
+.search .one-third .block .entry-footer {
 	padding: 15px 15px 0 15px;
 }
 .home .one-third .block .entry-title,
-.archive .one-third .block .entry-title {
+.archive .one-third .block .entry-title,
+.search .one-third .block .entry-title  {
 	font-size: 1.125em; /* 18px */
 	margin: 0;
 }
 .home .one-third .block .entry-content p,
-.archive .one-third .block .entry-content p {
+.archive .one-third .block .entry-content p,
+.search .one-third .block .entry-content p {
 	color: #404040;
 	font-size: .938em; /* 15px */
 }
 .home .one-third .block .entry-footer,
-.archive .one-third .block .entry-footer {
+.archive .one-third .block .entry-footer,
+.search .one-third .block .entry-footer {
 	padding-top: 0;
 }
 /* Pagination
@@ -657,7 +664,8 @@ ul.header .nav .focus > ul,
 	padding: .714em; /* 10px */
 }
 .main .gform_wrapper .gform_footer input.button,
-.main .gform_wrapper .gform_footer input[type="submit"] {
+.main .gform_wrapper .gform_footer input[type="submit"],
+.form-submit .submit {
 	background: #1f509c; /* customize - primary */
 	border: none;
 	border-radius: 4px;
@@ -667,7 +675,8 @@ ul.header .nav .focus > ul,
 	padding: .5em 1em;
 	text-transform: uppercase;
 }
-.main .gform_wrapper .gform_footer input.button:active {
+.main .gform_wrapper .gform_footer input.button:active,
+.form-submit .submit:active {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
 	position: relative;
 	top: 1px;

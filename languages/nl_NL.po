@@ -1,0 +1,190 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Savvii Theme\n"
+"POT-Creation-Date: 2015-03-23 21:49+0100\n"
+"PO-Revision-Date: 2015-03-23 21:52+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: content-none.php:3
+msgid "Not Found"
+msgstr "Niet gevonden"
+
+#: content-none.php:5
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Er kan niets worden gevonden op deze locatie. Wilt u misschien een "
+"zoekopdracht proberen?"
+
+#: content-post.php:15 content-post.php:42
+msgid "by"
+msgstr "door"
+
+#: content-post.php:51
+msgid "Pages:"
+msgstr "Pagina's:"
+
+#: customizer.php:7
+msgid "Fran Theme Options"
+msgstr "Fran Thema Opties"
+
+#: customizer.php:10
+msgid "Allows you to customize layout settings for the fran theme."
+msgstr "Hiermee kunt u de lay-instellingen aanpassen voor het Fran thema."
+
+#: customizer.php:98
+msgid "Primary Color"
+msgstr "Primaire kleur"
+
+#: customizer.php:109
+msgid "Secondary Color"
+msgstr "Secundaire kleur"
+
+#: footer.php:12
+msgid "Back to top"
+msgstr "Naar boven"
+
+#: footer.php:27
+msgid "All rights reserved"
+msgstr "Alle rechten voorbehouden."
+
+#: header.php:24
+msgid "Menu"
+msgstr "Menu"
+
+#: header.php:28
+msgid "Search"
+msgstr "Zoeken"
+
+#: header.php:35
+msgid "Logout"
+msgstr "Uitloggen"
+
+#: header.php:37
+msgid "Login"
+msgstr "Inloggen"
+
+#: module-pagination.php:4
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: module-pagination.php:4
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: module-sharing.php:3
+msgid "Share this:"
+msgstr "Deel dit:"
+
+#: module-sharing.php:6
+msgid "Share this on Facebook"
+msgstr "Deel dit op Facebook"
+
+#: module-sharing.php:7
+msgid "Facebook"
+msgstr "Facebook"
+
+#: module-sharing.php:11
+msgid "Share this on Twitter"
+msgstr "Deel op Twitter"
+
+#: module-sharing.php:12
+msgid "Twitter"
+msgstr "Twitter"
+
+#: module-sharing.php:16
+msgid "Share this on Linkedin"
+msgstr "Deel op LinkedIn"
+
+#: module-sharing.php:17
+msgid "Linkedin"
+msgstr "Linkedin"
+
+#: module-sharing.php:21
+msgid "Share this via e-mail"
+msgstr "Delen via e-mail"
+
+#: module-sharing.php:22
+msgid "E-mail"
+msgstr "E-mail"
+
+#: module-sharing.php:26
+msgid "Share this on Google+"
+msgstr "Delen op Google+"
+
+#: module-sharing.php:27
+msgid "Google+"
+msgstr "Google+"
+
+#: module-sharing.php:31
+msgid "Take a look at this"
+msgstr "Kijk hier eens naar"
+
+#: module-sharing.php:31
+msgid "Share this via WhatsApp"
+msgstr "Deel dit via WhatsApp"
+
+#: module-sharing.php:32
+msgid "WhatsApp"
+msgstr "Whatsapp"
+
+#~ msgid "Savvii Theme Options"
+#~ msgstr "Thema opties"
+
+#~ msgid "Allows you to customize layout settings for the Savvii theme."
+#~ msgstr "Hiermee kunt u de lay-instellingen aanpassen voor het Savvii thema."
+
+#~ msgid "Product group"
+#~ msgstr "Productgroep"
+
+#~ msgid "All"
+#~ msgstr "Alle"
+
+#~ msgid "Packaging"
+#~ msgstr "Verpakking"
+
+#~ msgid "Weight"
+#~ msgstr "Gewicht"
+
+#~ msgid "per"
+#~ msgstr "per"
+
+#~ msgid "bag"
+#~ msgstr "bag"
+
+#~ msgid "big bag 1m3"
+#~ msgstr "big bag 1m3"
+
+#~ msgid "big bag ¾m3"
+#~ msgstr "big bag ¾m3"
+
+#~ msgid "big bag ½m3"
+#~ msgstr "big bag ½m3"
+
+#~ msgid "bucket"
+#~ msgstr "emmer"
+
+#~ msgid "Application"
+#~ msgstr "Toepassing"
+
+#~ msgid "Responsive Products Options"
+#~ msgstr "Savvii opties"
+
+#~ msgid ""
+#~ "Allows you to customize layout settings for the Responsive Products theme."
+#~ msgstr ""
+#~ "Hiermee kunt u de lay-instellingen aanpassen voor het Responsive Savvii "
+#~ "thema."

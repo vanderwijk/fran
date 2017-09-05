@@ -175,6 +175,11 @@ function new_excerpt_more( $more ) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
+function so_26068464( $content ) {
+	return strip_tags( $content, '<p>' );
+}
+add_filter( 'the_excerpt', 'so_26068464' );
+
 // Remove Yoast SEO plugin comments from html source
 function ad_ob_start() {
 	ob_start( 'ad_filter_wp_head_output' );

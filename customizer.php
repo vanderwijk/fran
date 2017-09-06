@@ -11,6 +11,16 @@ class fran_customizer {
 			)
 		);
 
+
+		$wp_customize->add_section( 'fran_code', 
+			array(
+				'title' => __( 'Additional Code ', 'fran' ), // Visible title of section
+				'priority' => 210, // Determines what order this appears in
+				'capability' => 'edit_theme_options', //Capability needed to tweak
+				'description' => __('Allows you to add code to the header and footer section of the fran theme.', 'fran'), //Descriptive tooltip
+			)
+		);
+
 		//2. Register new settings to the WP database
 		$wp_customize->add_setting( 'primary_color',
 			array(
@@ -32,12 +42,32 @@ class fran_customizer {
 			)
 		);
 
+		$wp_customize->add_setting( 'fran_code_header' );
+		$wp_customize->add_control(
+			'fran_code_header',
+				array(
+					'type' => 'textarea',
+					'label' => __( 'Header', 'fran' ),
+					'section' => 'fran_code',
+				)
+		);
+
+		$wp_customize->add_setting( 'fran_code_footer' );
+		$wp_customize->add_control(
+			'fran_code_footer',
+				array(
+					'type' => 'textarea',
+					'label' => __( 'Footer', 'fran' ),
+					'section' => 'fran_code',
+				)
+		);
+
 		$wp_customize->add_setting( 'show_search' );
 		$wp_customize->add_control(
 			'show_search',
 				array(
 					'type' => 'checkbox',
-					'label' => 'Show search box',
+					'label' => __( 'Show search box', 'fran' ),
 					'section' => 'fran_options',
 				)
 		);
@@ -47,7 +77,7 @@ class fran_customizer {
 			'show_login',
 				array(
 					'type' => 'checkbox',
-					'label' => 'Show login/logout links',
+					'label' => __( 'Show login/logout links', 'fran' ),
 					'section' => 'fran_options',
 				)
 		);
@@ -57,7 +87,7 @@ class fran_customizer {
 			'show_author',
 				array(
 					'type' => 'checkbox',
-					'label' => 'Show author in post meta',
+					'label' => __( 'Show author in post meta', 'fran' ),
 					'section' => 'fran_options',
 				)
 		);
@@ -67,7 +97,7 @@ class fran_customizer {
 			'show_date',
 				array(
 					'type' => 'checkbox',
-					'label' => 'Show the date in post meta',
+					'label' => __( 'Show the date in post meta', 'fran' ),
 					'section' => 'fran_options',
 				)
 		);
@@ -77,7 +107,7 @@ class fran_customizer {
 			'footer_widgets',
 				array(
 					'type' => 'radio',
-					'label' => 'Footer Widgets',
+					'label' => __( 'Footer Widgets', 'fran' ),
 					'section' => 'fran_options',
 					'choices' => array(
 						'3columns' => '3 Columns',
@@ -116,6 +146,18 @@ class fran_customizer {
 		//4. We can also change built-in settings by modifying properties. For instance, let's make some stuff use live preview JS
 		$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 		$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+	}
+
+	public static function header_code_output() {
+		if ( get_theme_mod('fran_code_header') ) {
+			echo get_theme_mod('fran_code_header');
+		}
+	}
+
+	public static function footer_code_output() {
+		if ( get_theme_mod('fran_code_footer') ) {
+			echo get_theme_mod('fran_code_footer');
+		}
 	}
 
 	public static function header_output() {
@@ -280,6 +322,10 @@ add_action( 'customize_register' , array( 'fran_customizer' , 'register' ) );
 
 // Output custom CSS to live site
 add_action( 'wp_head' , array( 'fran_customizer' , 'header_output' ) );
+
+add_action( 'wp_head' , array( 'fran_customizer' , 'header_code_output' ) );
+
+add_action( 'wp_footer' , array( 'fran_customizer' , 'footer_code_output' ) );
 
 // Enqueue live preview javascript in Theme Customizer admin screen
 //add_action( 'customize_preview_init' , array( 'fran_customizer' , 'live_preview' ) );

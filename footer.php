@@ -1,5 +1,5 @@
 	</div>
-	<footer class="footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+	<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 		<div class="breadcrumbs">
 			<div class="row">
 				<div class="col">

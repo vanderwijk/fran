@@ -14,7 +14,7 @@ class fran_customizer {
 
 		$wp_customize->add_section( 'fran_code', 
 			array(
-				'title' => __( 'Additional Code ', 'fran' ), // Visible title of section
+				'title' => __( 'Additional Code', 'fran' ), // Visible title of section
 				'priority' => 210, // Determines what order this appears in
 				'capability' => 'edit_theme_options', //Capability needed to tweak
 				'description' => __('Allows you to add code to the header and footer section of the theme.', 'fran'), //Descriptive tooltip

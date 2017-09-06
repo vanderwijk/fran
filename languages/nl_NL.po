@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Savvii Theme\n"
-"POT-Creation-Date: 2017-09-06 14:09+0200\n"
-"PO-Revision-Date: 2017-09-06 14:10+0200\n"
+"POT-Creation-Date: 2017-09-06 14:13+0200\n"
+"PO-Revision-Date: 2017-09-06 14:13+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -72,8 +72,8 @@ msgid "Allows you to customize layout settings for the theme."
 msgstr "Hiermee kunt u de lay-out instellingen van het thema aanpassen."
 
 #: customizer.php:17
-msgid "Additional Code "
-msgstr "Aanvullende code"
+msgid "Additional Code"
+msgstr "Extra code"
 
 #: customizer.php:20
 msgid "Allows you to add code to the header and footer section of the theme."
@@ -130,7 +130,7 @@ msgstr "Naar boven"
 
 #: footer.php:27
 msgid "All rights reserved"
-msgstr "Alle rechten voorbehouden."
+msgstr "Alle rechten voorbehouden"
 
 #: footer.php:33
 msgid "Fran WordPress theme by"

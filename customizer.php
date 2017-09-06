@@ -4,10 +4,10 @@ class fran_customizer {
 		//1. Define a new section (if desired) to the Theme Customizer
 		$wp_customize->add_section( 'fran_options', 
 			array(
-				'title' => __( 'Fran Theme Options', 'fran' ), //Visible title of section
+				'title' => __( 'Theme Options', 'fran' ), //Visible title of section
 				'priority' => 35, //Determines what order this appears in
 				'capability' => 'edit_theme_options', //Capability needed to tweak
-				'description' => __('Allows you to customize layout settings for the fran theme.', 'fran'), //Descriptive tooltip
+				'description' => __('Allows you to customize layout settings for the theme.', 'fran'), //Descriptive tooltip
 			)
 		);
 
@@ -17,7 +17,7 @@ class fran_customizer {
 				'title' => __( 'Additional Code ', 'fran' ), // Visible title of section
 				'priority' => 210, // Determines what order this appears in
 				'capability' => 'edit_theme_options', //Capability needed to tweak
-				'description' => __('Allows you to add code to the header and footer section of the fran theme.', 'fran'), //Descriptive tooltip
+				'description' => __('Allows you to add code to the header and footer section of the theme.', 'fran'), //Descriptive tooltip
 			)
 		);
 
@@ -110,8 +110,8 @@ class fran_customizer {
 					'label' => __( 'Footer Widgets', 'fran' ),
 					'section' => 'fran_options',
 					'choices' => array(
-						'3columns' => '3 Columns',
-						'4columns' => '4 Columns'
+						'3columns' => __( '3 Columns', 'fran' ),
+						'4columns' => __( '4 Columns', 'fran' )
 					),
 				)
 		);

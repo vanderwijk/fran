@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Savvii Theme\n"
-"POT-Creation-Date: 2017-09-06 14:00+0200\n"
-"PO-Revision-Date: 2017-09-06 14:05+0200\n"
+"POT-Creation-Date: 2017-09-06 14:09+0200\n"
+"PO-Revision-Date: 2017-09-06 14:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -64,22 +64,21 @@ msgid "by"
 msgstr "door"
 
 #: customizer.php:7
-msgid "Fran Theme Options"
-msgstr "Fran Thema Opties"
+msgid "Theme Options"
+msgstr "Thema Opties"
 
 #: customizer.php:10
-msgid "Allows you to customize layout settings for the fran theme."
-msgstr "Hiermee kunt u de lay-instellingen aanpassen voor het Fran thema."
+msgid "Allows you to customize layout settings for the theme."
+msgstr "Hiermee kunt u de lay-out instellingen van het thema aanpassen."
 
 #: customizer.php:17
 msgid "Additional Code "
 msgstr "Aanvullende code"
 
 #: customizer.php:20
-msgid ""
-"Allows you to add code to the header and footer section of the fran theme."
+msgid "Allows you to add code to the header and footer section of the theme."
 msgstr ""
-"Hiermee kunt u de code toevoegen aan de header en footer van het Fran thema."
+"Hiermee kunt u de code toevoegen aan de header en footer van het thema."
 
 #: customizer.php:50
 msgid "Header"
@@ -108,6 +107,14 @@ msgstr "Toon datum in post meta"
 #: customizer.php:110
 msgid "Footer Widgets"
 msgstr "Footer widgets"
+
+#: customizer.php:113
+msgid "3 Columns"
+msgstr "3 kolommen"
+
+#: customizer.php:114
+msgid "4 Columns"
+msgstr "4 kolommen"
 
 #: customizer.php:128
 msgid "Primary Color"

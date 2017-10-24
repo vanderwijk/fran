@@ -50,7 +50,11 @@ Website development by VanderWijk Consultancy - http://vanderwijk.nl
 			<div class="col">
 				<div class="block">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					<?php if ( is_singular() ) { ?>
+						<h2 class="site-title"><?php bloginfo( 'name' ); ?></h2>
+					<?php } else { ?>
 						<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+					<?php } ?>
 					</a>
 				</div>
 			</div>

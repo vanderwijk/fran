@@ -28,7 +28,7 @@
 		</a>
 	</li>
 	<li class="show-on-smartphone">
-		<a href="whatsapp://send?text=<?php _e( 'Take a look at this', 'fran'); ?>:%20<?php the_title_attribute(); ?>%20<?php the_permalink(); ?>" title="<?php _e( 'Share this via WhatsApp', 'fran'); ?>" onClick="ga('send', 'event', 'share', 'whatsapp');" class="icon whatsapp">
+		<a href="whatsapp://send?text=<?php _e( 'Take a look at this', 'fran'); ?>:%20<?php the_title_attribute(); ?>%20<?php the_permalink(); ?>" title="<?php _e( 'Share this via WhatsApp', 'fran'); ?>" onClick="ga('send', 'event', 'share', 'whatsapp');" rel="external nofollow" class="icon whatsapp">
 			<?php _e( 'WhatsApp', 'fran'); ?>
 		</a>
 	</li>

@@ -313,6 +313,12 @@ ul.header .nav .focus > ul,
 .page .entry-meta {
 	display: none;
 }
+.callout {
+	border: 1px solid #b7e5ff;
+    margin-bottom: 1.25em;
+    padding: 1.25em;
+	background: #eef9ff;
+}
 /* Category / Tag labels
 ----------------------------------------------------------------------------------------------------*/
 .entry-footer {

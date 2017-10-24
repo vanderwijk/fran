@@ -161,7 +161,8 @@ ul.header .nav .focus > ul,
 	font-size: 2em; /* 32px */
 	font-weight: 500;
 	line-height: 1em;
-	padding: 0 0.469em;
+	margin-bottom: 0.273972602739726em;
+	padding: 0 .469em;
 	text-transform: uppercase;
 }/*
 

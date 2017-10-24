@@ -310,6 +310,9 @@ ul.header .nav .focus > ul,
 	text-align: center;
 	padding: 1.5625% 3.125%;
 }
+.page .entry-meta {
+	display: none;
+}
 /* Category / Tag labels
 ----------------------------------------------------------------------------------------------------*/
 .entry-footer {

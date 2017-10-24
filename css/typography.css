@@ -45,9 +45,6 @@ nav,
 section {
 	display: block;
 }
-strong {
-	font-weight: 500;
-}
 a img {
 	border: 0;
 }
@@ -111,7 +108,7 @@ abbr[title] {
 }
 b,
 strong {
-	font-weight: 700;
+	font-weight: 500;
 }
 cite,
 dfn,

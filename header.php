@@ -50,11 +50,15 @@ Website development by VanderWijk Consultancy - http://vanderwijk.nl
 			<div class="col">
 				<div class="block">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<?php if ( is_singular() ) { ?>
-						<h2 class="site-title"><?php bloginfo( 'name' ); ?></h2>
-					<?php } else { ?>
-						<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-					<?php } ?>
+						<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+						$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+						if ( has_custom_logo() ) {
+								echo '<img src="'. esc_url( $logo[0] ) .'" class="logo">';
+						} else if ( is_singular() ) { ?>
+							<h2 class="site-title"><?php bloginfo( 'name' ); ?></h2>
+						<?php } else { ?>
+							<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+						<?php } ?>
 					</a>
 				</div>
 			</div>

@@ -58,7 +58,6 @@ if ( function_exists( 'register_nav_menus' ) ) {
 	);
 }
 
-add_theme_support( 'custom-logo' );
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
@@ -76,6 +75,18 @@ if ( ! isset( $content_width ) ) $content_width = 920;
 
 // Content width for embeds
 if ( ! isset( $content_width ) ) $content_width = 980;
+
+// Custom logo
+function fran_custom_logo_setup() {
+    $defaults = array(
+        'flex-height' => true,
+        'flex-width'  => true,
+        'header-text' => array( 'site-title', 'site-description' ),
+    );
+    add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'fran_custom_logo_setup' );
+
 
 // Responsive oEmbed
 function responsive_embed( $html, $url, $attr, $post_ID ) {

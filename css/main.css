@@ -164,7 +164,11 @@ ul.header .nav .focus > ul,
 	margin-bottom: 0.273972602739726em;
 	padding: 0 .469em;
 	text-transform: uppercase;
-}/*
+}
+.logo {
+	max-height: 60px;
+	width: auto;
+}
 
 /* Login / logout
 ----------------------------------------------------------------------------------------------------*/

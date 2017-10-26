@@ -205,11 +205,8 @@ function ad_ob_end_flush() {
 }
 function ad_filter_wp_head_output( $output ) {
 	if ( defined( 'WPSEO_VERSION' ) ) {
-		$output = str_ireplace( '<!-- This site is optimized with the Yoast WordPress SEO plugin v' . WPSEO_VERSION . ' - https://yoast.com/wordpress/plugins/seo/ -->', '', $output );
-		$output = str_ireplace( '<!-- / Yoast WordPress SEO plugin. -->', '', $output );
-	}
-	if ( defined( 'GOOGLE_ANALYTICATOR_VERSION' ) ) {
-		$output = str_ireplace( '<!-- Google Analytics Tracking by Google Analyticator ' . GOOGLE_ANALYTICATOR_VERSION . ': http://www.videousermanuals.com/google-analyticator/ -->', '', $output );
+		$output = str_ireplace( '<!-- This site is optimized with the Yoast SEO plugin v' . WPSEO_VERSION . ' - https://yoast.com/wordpress/plugins/seo/ -->', '', $output );
+		$output = str_ireplace( '<!-- / Yoast SEO plugin. -->', '', $output );
 	}
 	return $output;
 }

@@ -495,7 +495,7 @@ ul.header .nav .focus > ul,
 /* Pagination
 ----------------------------------------------------------------------------------------------------*/
 .pagination {
-	font-size: .929em; /* 13px */
+	font-size: .8125em; /* 13px */
 	text-align: center;
 }
 .pagination .block {

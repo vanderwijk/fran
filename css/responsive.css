@@ -33,6 +33,9 @@ screen and (min-device-width: 1536px) and (max-device-width: 2048px) and (-webki
 /* Smartphones and HiDPI smartphones */
 @media screen and (max-width: 480px),
 screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+	.site-description {
+		display: none;
+	}
 	.show-on-smartphone {
 		display: block;
 	}
@@ -113,6 +116,7 @@ screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-
 	.toggled-on .children {
 		display: block;
 		float: none;
+		margin-left: 0;
 	}
 	.toggled-on.nav li > ul {
 		background-color: transparent;

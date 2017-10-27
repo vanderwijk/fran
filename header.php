@@ -36,8 +36,8 @@ if ( has_custom_logo() ) { ?>
 <?php } else { ?>
 							<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 <?php } ?>
-							<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
 						</a>
+						<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
 					</div>
 				</div>
 			</div>

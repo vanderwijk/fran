@@ -297,9 +297,6 @@ ul.nav-menu ul a:focus,
 .searchform input {
 	background: <?php echo $primary_color_lighter; ?>;
 }
-.searchform {
-	border-color: <?php echo $primary_color; ?>;
-}
 .login-logout-link {
 	color: <?php echo $primary_color; ?>;
 	background: <?php echo $primary_color_lighter; ?>;

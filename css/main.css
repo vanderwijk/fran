@@ -32,13 +32,14 @@
 .menu-toggle {
 	background: none;
 	border: none;
-	color: #fff;
+	color: #3f51b5; /* customize - primary */
 	cursor: pointer;
 	float: left;
 	line-height: 36px;
 	margin: 0;
 }
 .menu-toggle:before {
+	color: #fff;
 	content: '\f333';
 	font: normal 20px/0 'dashicons';
 	padding-right: 4px;
@@ -193,7 +194,7 @@ ul.header .nav .focus > ul,
 .searchform {
 	background: #eceef8; /* customize - primary 10% */
 	float: right;
-	border: 2px solid #3f51b5; /* customize - primary */
+	border: 2px solid #fff;
 }
 .searchform label {
 	display: none;

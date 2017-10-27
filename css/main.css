@@ -194,7 +194,8 @@ ul.header .nav .focus > ul,
 .searchform {
 	background: #eceef8; /* customize - primary 10% */
 	float: right;
-	border: 2px solid #fff;
+	border: 2px solid #eceef8; /* customize - primary 10% */
+	border-radius: 5px;
 }
 .searchform label {
 	display: none;

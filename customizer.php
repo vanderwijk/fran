@@ -82,6 +82,16 @@ class fran_customizer {
 				)
 		);
 
+		$wp_customize->add_setting( 'disable_smileys' );
+		$wp_customize->add_control(
+			'disable_smileys',
+				array(
+					'type' => 'checkbox',
+					'label' => __( 'Prevent WordPress from parsing smileys', 'fran' ),
+					'section' => 'fran_options',
+				)
+		);
+
 		$wp_customize->add_setting( 'show_author' );
 		$wp_customize->add_control(
 			'show_author',
@@ -246,7 +256,7 @@ ul.nav-menu ul a:hover,
 .nav-menu ul ul a:hover,
 ul.nav-menu ul a:focus,
 .nav-menu ul ul a:focus,
-.top,
+.branding,
 .main button,
 .main .gform_wrapper .gform_footer input.button,
 .main .gform_wrapper .gform_footer input[type="submit"] { 
@@ -262,6 +272,9 @@ ul.nav-menu ul a:focus,
 .category-list li a:active { 
 	background-color: <?php echo $primary_color_light; ?>; 
 }
+.site-description {
+	color: <?php echo $primary_color_light; ?>;
+}
 .header .menu .current_page_item > a,
 .header .menu .current_page_ancestor > a,
 .header .menu .current-menu-item > a,
@@ -272,6 +285,9 @@ ul.nav-menu ul a:focus,
 .header .menu li a:focus {
 	border-color: <?php echo $secondary_color; ?>;
 }
+.header .nav li a {
+	color: <?php echo $primary_color; ?>;
+}
 .content a {
 	color: <?php echo $primary_color; ?>;
 	border-color: <?php echo $primary_color; ?>;
@@ -280,6 +296,9 @@ ul.nav-menu ul a:focus,
 .searchform,
 .searchform input {
 	background: <?php echo $primary_color_lighter; ?>;
+}
+.searchform {
+	border-color: <?php echo $primary_color; ?>;
 }
 .login-logout-link {
 	color: <?php echo $primary_color; ?>;

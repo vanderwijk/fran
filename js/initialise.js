@@ -13,10 +13,15 @@ jQuery(document).ready(function($) {
 		$( 'html, body' ).animate( { scrollTop: 0 }, 1000 );
 	});
 
-	// Headroom
-	$( '#top').headroom({
-		'offset': 205,
-		'tolerance': 5,
-	});
-
 });
+
+// Headroom
+var headroomHeight = document.getElementById('branding').clientHeight;
+var headroom  = new Headroom( document.getElementById('branding'), {
+	"offset": headroomHeight,
+	"tolerance": 5
+});
+headroom.init();
+
+// Calculate padding on element below headroom to allow for flexible height
+document.getElementById("navigation").style.padding = headroomHeight + "px 0 0 0";

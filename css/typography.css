@@ -277,6 +277,7 @@ input[type='reset'],
 input[type='submit'] {
 	-webkit-appearance: button;
 	cursor: pointer;
+	padding: 0;
 }
 button[disabled],
 input[disabled] {

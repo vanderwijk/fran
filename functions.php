@@ -10,43 +10,38 @@ add_action( 'after_setup_theme', 'fran_theme_setup' );
 require 'customizer.php';
 
 // Include scripts and styles
-function include_scripts_styles () {
+function fran_scripts_styles () {
 	if ( !is_admin() ) {
 
-		//wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic' );
-		wp_enqueue_style( 'reset', get_template_directory_uri() . '/css/reset.css' );
-		wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css' );
-		wp_enqueue_style( 'grid', get_template_directory_uri() . '/css/grid.css' );
-		wp_enqueue_style( 'roboto', get_template_directory_uri() . '/css/roboto.css' );
+		wp_enqueue_style( 'reset', get_template_directory_uri() . '/css/reset.css', array(), wp_get_theme()->get('Version') );
+		wp_enqueue_style( 'grid', get_template_directory_uri() . '/css/grid.css', array(), wp_get_theme()->get('Version') );
+		wp_enqueue_style( 'roboto', get_template_directory_uri() . '/css/roboto.css', array(), wp_get_theme()->get('Version') );
 		wp_enqueue_style( 'dashicons' );
-		wp_enqueue_style( 'typography', get_template_directory_uri() . '/css/typography.css' );
-		wp_enqueue_style( 'widget', get_template_directory_uri() . '/css/widget.css' );
-		wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css' );
+		wp_enqueue_style( 'typography', get_template_directory_uri() . '/css/typography.css', array(), wp_get_theme()->get('Version') );
+		wp_enqueue_style( 'widget', get_template_directory_uri() . '/css/widget.css', array(), wp_get_theme()->get('Version') );
+		wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css', array(), wp_get_theme()->get('Version') );
 		if ( is_single() ) {
-			wp_enqueue_style( 'comments', get_template_directory_uri() . '/css/comments.css' );
+			wp_enqueue_style( 'comments', get_template_directory_uri() . '/css/comments.css', array(), wp_get_theme()->get('Version') );
 		}
-		wp_enqueue_style( 'responsive', get_template_directory_uri() . '/css/responsive.css' );
+		wp_enqueue_style( 'responsive', get_template_directory_uri() . '/css/responsive.css', array(), wp_get_theme()->get('Version') );
 
 		wp_enqueue_script( 'jquery' );
 
 		wp_register_script( 'headroom', get_template_directory_uri() . '/js/headroom.min.js', array( 'jquery' ), '0.7.0', true );
-		wp_register_script( 'headroom-jquery', get_template_directory_uri() . '/js/jquery.headroom.min.js', array( 'jquery' ), '0.7.0', true );
-
 		wp_enqueue_script( 'headroom' );
-		wp_enqueue_script( 'headroom-jquery' );
 
-		wp_register_script( 'masonry-init', get_template_directory_uri() . '/js/masonry-init.js', array( 'masonry' ), '1.0', true );
+		wp_register_script( 'masonry-init', get_template_directory_uri() . '/js/masonry-init.js', array( 'masonry' ), wp_get_theme()->get('Version'), true );
 		if ( is_front_page() || is_archive() || is_search() ) {
 			wp_enqueue_script( 'masonry' );
 			wp_enqueue_script( 'masonry-init' ); 
 		}
 
-		wp_register_script( 'initialise', get_template_directory_uri() . '/js/initialise.js', array( 'jquery' ), '1.0', true );
+		wp_register_script( 'initialise', get_template_directory_uri() . '/js/initialise.js', array( 'jquery' ), wp_get_theme()->get('Version'), true );
 		wp_enqueue_script( 'initialise' );
 
 	}
 }
-add_action( 'wp_enqueue_scripts', 'include_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'fran_scripts_styles' );
 
 // Menus
 add_theme_support( 'menus' );
@@ -89,11 +84,11 @@ add_action( 'after_setup_theme', 'fran_custom_logo_setup' );
 
 
 // Responsive oEmbed
-function responsive_embed( $html, $url, $attr, $post_ID ) {
+function fran_responsive_embed( $html, $url, $attr, $post_ID ) {
 	$return = '<div class="video-container">' . $html . '</div>';
 	return $return;
 }
-add_filter( 'embed_oembed_html', 'responsive_embed', 10, 4 );
+add_filter( 'embed_oembed_html', 'fran_responsive_embed', 10, 4 );
 
 // Overwrite number of posts in archive page
 if ( !is_admin() ) {
@@ -105,7 +100,7 @@ function fran_posts_per_page( $query ) {
 }
 
 // Add current-page class to taxonomy archives
-function current_type_nav_class($classes, $item) {
+function fran_current_nav_class($classes, $item) {
 	$post_type = get_query_var( 'post_type' );
 	if ( get_post_type() == $post_type ) {
 		$classes = array_filter( $classes, "get_current_value" );
@@ -120,7 +115,7 @@ function current_type_nav_class($classes, $item) {
 function get_current_value( $element ) {
 	return ( $element != "current-page-parent" );
 }
-add_filter( 'nav_menu_css_class', 'current_type_nav_class', 10, 2);
+add_filter( 'nav_menu_css_class', 'fran_current_nav_class', 10, 2);
 
 function fran_remove_admin_bar() {
 	if ( !current_user_can( 'edit_posts' ) && !is_admin() ) {
@@ -142,6 +137,12 @@ if( $footer_widget_columns == '' ) {
 			$widgetclass = 'one-fourth';
 			break;
 	}
+}
+
+// Disable smileys
+if ( !get_theme_mod ( 'disable_smileys' ) == '' ) {
+	remove_action('wp_head', 'print_emoji_detection_script', 7);
+	remove_action('wp_print_styles', 'print_emoji_styles');
 }
 
 // Widget areas
@@ -181,20 +182,20 @@ if (function_exists( 'register_sidebar')) {
 }
 
 // Modify exerpts
-function custom_excerpt_length( $length ) {
+function fran_excerpt_length( $length ) {
 	return 20;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'fran_excerpt_length', 999 );
 
 function new_excerpt_more( $more ) {
 	return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
-function so_26068464( $content ) {
+function fran_excerpt_strip_tags( $content ) {
 	return strip_tags( $content, '<p>' );
 }
-add_filter( 'the_excerpt', 'so_26068464' );
+add_filter( 'the_excerpt', 'fran_excerpt_strip_tags' );
 
 // Remove Yoast SEO plugin comments from html source
 function ad_ob_start() {
@@ -212,3 +213,10 @@ function ad_filter_wp_head_output( $output ) {
 }
 add_action( 'get_header', 'ad_ob_start' );
 add_action( 'wp_head', 'ad_ob_end_flush', 100 );
+
+// Remove recent comments style
+function fran_remove_recent_comments_style() {  
+	global $wp_widget_factory;  
+	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );  
+}  
+add_action( 'widgets_init', 'fran_remove_recent_comments_style' );

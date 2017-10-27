@@ -85,9 +85,6 @@ screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-
 		box-shadow: none;
 		border: none;
 	}
-	.site-title {
-		padding: 0;
-	}
 	.pagination .pages,
 	.pagination .nextpostslink,
 	.pagination .previouspostslink {
@@ -133,5 +130,8 @@ screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-
 	.toggled-on.nav li:hover > a,
 	.toggled-on.nav .children a {
 		background-color: transparent;
+	}
+	.toggled-on.nav li a {
+		padding: 8px 2px;
 	}
 }

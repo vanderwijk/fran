@@ -1,7 +1,7 @@
-/* Top
+/* Header
 ----------------------------------------------------------------------------------------------------*/
-.top {
-	background: #1f509c; /* customize - primary */
+.branding {
+	background: #3f51b5; /* customize - primary */
 	width: 100%;
 	z-index: 5;
 }
@@ -29,17 +29,13 @@
 .headroom--not-top {
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
-.top .block {
-	margin-top: 0;
-	margin-bottom: 0;
-}
 .menu-toggle {
 	background: none;
 	border: none;
 	color: #fff;
 	cursor: pointer;
 	float: left;
-	line-height: 42px;
+	line-height: 36px;
 	margin: 0;
 }
 .menu-toggle:before {
@@ -54,7 +50,6 @@
 }
 .header .nav {
 	float: left;
-	margin-right: 4%; /* 40px */
 }
 .header .nav ul {
 	list-style: none;
@@ -63,14 +58,18 @@
 .header .nav li {
 	float: left;
 	position: relative; /* Remove for full-width menu */
+	margin-left: 10px;
 }
 .header .nav li a {
-	color: #fff;
+	color: #3f51b5; /* customize - primary */
 	display: block;
 	line-height: 1em;
 	padding: .8125em 1em .625em 1em; /* 13px 16px 10px 16px */
+
+	padding: .5em .3125em; /* 8px 5px */
 	text-decoration: none;
-	border-bottom: 3px solid transparent;
+	border-bottom: 2px solid transparent;
+	border-top: 2px solid transparent;
 
 	-webkit-transition: border 500ms ease-out;
 	-moz-transition: border 500ms ease-out;
@@ -81,12 +80,11 @@
 .header .nav li a:hover,
 .header .nav li:focus > a,
 .header .nav li a:focus {
-	border-color: #ff4081; /* customize - secondary */
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+	border-bottom-color: #ff4081; /* customize - secondary */
 }
 .header .nav .sub-menu,
 .header .nav .children {
-	background: #1f509c; /* customize - primary */
+	background: #3f51b5; /* customize - primary */
 	padding: 0;
 	position: absolute;
 	left: 0;
@@ -140,7 +138,7 @@ ul.header .nav .focus > ul,
 .header .nav .current_page_ancestor > a,
 .header .nav .current-menu-item > a,
 .header .nav .current-menu-ancestor > a {
-	border-color: #ff4081; /* customize - secondary */
+	border-bottom-color: #ff4081; /* customize - secondary */
 }
 .header .nav .menu-item-has-children a:after {
 	content: '\f347';
@@ -153,32 +151,38 @@ ul.header .nav .focus > ul,
 	content: '';
 }
 .header {
-	background: #dbe3ef; /* customize - primary 20% */
+	background: #d9dcf0; /* customize - primary 20% */
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 .site-title {
-	float: left;
+	color: #fff;
+	display: inline-block;
 	font-size: 2em; /* 32px */
 	font-weight: 500;
 	line-height: 1em;
-	margin-bottom: 0.273972602739726em;
-	padding: 0 .469em;
+	margin: 0;
 	text-transform: uppercase;
 }
+.site-description {
+	margin: .625em 0 0 0; /* 20px 0 0 0 */	
+	color: #d9dcf0; /* customize - primary 20% */
+	font-weight: 400;
+	font-size: 1em;
+}
 .logo {
-	max-height: 60px;
+	max-height: 3.125em; /* 50px */
 	width: auto;
 }
 
 /* Login / logout
 ----------------------------------------------------------------------------------------------------*/
 .login-logout-link {
-	background-color: #dbe3ef; /* customize - primary 20% */
+	background-color: #d9dcf0; /* customize - primary 20% */
 	float: right;
 	margin: .4375em 0 .4375em 1em; /* 7px */
 	border: none;
 	border-radius: 2px;
-	color: #1f509c; /* customize - primary */
+	color: #3f51b5; /* customize - primary */
 	display: block;
 	padding: 0 1.25em;
 	line-height: 1.75em; /* 28px */
@@ -187,22 +191,20 @@ ul.header .nav .focus > ul,
 /* Searchform
 ----------------------------------------------------------------------------------------------------*/
 .searchform {
-	background: #f4f6fa; /* customize - primary 10% */
+	background: #eceef8; /* customize - primary 10% */
 	float: right;
-	margin: .4375em 0 .375em 1em; /* 6px */
-	border: 1px solid #dbe3ef;
+	border: 2px solid #3f51b5; /* customize - primary */
 }
 .searchform label {
 	display: none;
 }
-.searchform input[type=text]:focus {
-	background: #fff;
-}
 .searchform input {
-	background: #f4f6fa; /* customize - primary 10% */
+	background: #eceef8; /* customize - primary 10% */
 	border: none;
-	color: #1f509c; /* customize - primary */
+	color: #3f51b5; /* customize - primary */
 	font-size: .875em; /* 14px */
+	font-size: 1em;
+	line-height: 1em;
 	padding: 0.3571428571428571em .5em; /* 5px 7px */
 	vertical-align: middle;
 	-webkit-appearance: none;
@@ -213,7 +215,8 @@ ul.header .nav .focus > ul,
 	width: 10em; /* 160px */
 }
 .searchform input[type=text]:focus {
-	color: #404040;
+	background: #fff;
+	color: #3f51b5; /* customize - primary */
 }
 .searchform input[type=submit] {
 	font-family: 'dashicons';
@@ -249,8 +252,8 @@ ul.header .nav .focus > ul,
 .page-content a,
 .entry-content a,
 .term-description a {
-	border-bottom: 1px solid #1f509c; /* customize - primary */
-	color: #1f509c; /* customize - primary */
+	border-bottom: 1px solid #3f51b5; /* customize - primary */
+	color: #3f51b5; /* customize - primary */
 	text-decoration: none;
 }
 .page-content a:hover,
@@ -310,7 +313,7 @@ ul.header .nav .focus > ul,
 	margin-bottom: 1.154em;
 }
 .one-third .entry-meta {
-	background: #f4f6fa; /* customize - primary 10% */
+	background: #eceef8; /* customize - primary 10% */
 	text-align: center;
 	padding: 1.5625% 3.125%;
 }
@@ -513,11 +516,11 @@ ul.header .nav .focus > ul,
 	border-radius: 3px;
 }
 .pagination .current {
-	background: #dbe3ef; /* customize - primary 20% */
-	border-color: #dbe3ef; /* customize - primary 20% */
+	background: #d9dcf0; /* customize - primary 20% */
+	border-color: #d9dcf0; /* customize - primary 20% */
 	border-style: solid;
 	border-width: 1px;
-	color: #1f509c; /* customize - primary */
+	color: #3f51b5; /* customize - primary */
 }
 .pagination .previouspostslink,
 .pagination .nextpostslink {
@@ -676,17 +679,17 @@ ul.header .nav .focus > ul,
 ----------------------------------------------------------------------------------------------------*/
 .gform_confirmation_message {
 	background: #ddeecc;
-	border-color: #1f509c; /* customize - primary */
+	border-color: #3f51b5; /* customize - primary */
 	border-style: solid;
 	border-width: 1px;
-	color: #1f509c; /* customize - primary */
+	color: #3f51b5; /* customize - primary */
 	margin: .714em 0; /* 10px */
 	padding: .714em; /* 10px */
 }
 .main .gform_wrapper .gform_footer input.button,
 .main .gform_wrapper .gform_footer input[type="submit"],
 .form-submit .submit {
-	background: #1f509c; /* customize - primary */
+	background: #3f51b5; /* customize - primary */
 	border: none;
 	border-radius: 4px;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);

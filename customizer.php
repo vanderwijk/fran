@@ -263,7 +263,7 @@ ul.nav-menu ul a:focus,
 	background-color: <?php echo $primary_color; ?>; 
 }
 .pagination .current { 
-	background-color: <?php echo $primary_color_light; ?>;
+	background-color: <?php echo $primary_color_lighter; ?>;
 	border-color: <?php echo $primary_color_light; ?>;
 	color: <?php echo $primary_color; ?>; 
 }

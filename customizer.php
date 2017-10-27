@@ -283,7 +283,7 @@ ul.nav-menu ul a:focus,
 .header .menu li a:hover,
 .header .menu li:focus > a,
 .header .menu li a:focus {
-	border-color: <?php echo $secondary_color; ?>;
+	border-bottom-color: <?php echo $secondary_color; ?>;
 }
 .header .nav li a {
 	color: <?php echo $primary_color; ?>;

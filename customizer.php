@@ -285,6 +285,7 @@ ul.nav-menu ul a:focus,
 .header .menu li a:focus {
 	border-bottom-color: <?php echo $secondary_color; ?>;
 }
+.menu-toggle,
 .header .nav li a {
 	color: <?php echo $primary_color; ?>;
 }

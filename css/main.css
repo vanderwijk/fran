@@ -39,7 +39,6 @@
 	margin: 0;
 }
 .menu-toggle:before {
-	color: #fff;
 	content: '\f333';
 	font: normal 20px/0 'dashicons';
 	padding-right: 4px;

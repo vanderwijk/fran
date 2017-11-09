@@ -297,6 +297,9 @@ ul.header .nav .focus > ul,
 	max-width: 100%;
 	width: 100%;
 }
+.one-third .block img.size-thumbnail {
+	width: auto;
+}
 .home .content img {
 	height: auto;
 	max-width: 100%;

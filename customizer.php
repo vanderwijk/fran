@@ -259,7 +259,8 @@ ul.nav-menu ul a:focus,
 .branding,
 .main button,
 .main .gform_wrapper .gform_footer input.button,
-.main .gform_wrapper .gform_footer input[type="submit"] { 
+.main .gform_wrapper .gform_footer input[type="submit"],
+form input[type=submit] { 
 	background-color: <?php echo $primary_color; ?>; 
 }
 .pagination .current { 

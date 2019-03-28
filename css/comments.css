@@ -2,6 +2,13 @@
 	margin: 0 7.6923% 3.5em;
 }
 
+.comment-form-comment textarea {
+	border: 1px solid #eceae6;
+	border-radius: 3px;
+	padding: .25em;
+	width: 100%;
+}
+
 .comment-list + .comment-respond,
 .comment-navigation + .comment-respond {
 	padding-top: 1.75em;
@@ -113,12 +120,13 @@
 	text-align: right;
 }
 .comment-reply-link {
-	border: 1px solid #d1d1d1;
+	border: 2px solid #d1d1d1;
 	border-radius: 2px;
 	color: #007acc;
 	display: inline-block;
 	font-size: 13px;
 	font-size: 0.8125rem;
+	font-weight: 600;
 	line-height: 1;
 	padding: 0.5384615385em 0.5384615385em 0.4615384615em;
 }
@@ -194,7 +202,7 @@
 	float: right;
 	height: 32px;
 	overflow: hidden;
-	width: 26px;
+	width: 32px;
 }
 
 .comment-reply-title small a:hover,
@@ -203,7 +211,9 @@
 }
 
 .comment-reply-title small a:before {
+	font-family: 'dashicons';
 	content: "\f405";
+	content: "\f153";
 	font-size: 32px;
 	position: relative;
 	top: -5px;

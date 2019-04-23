@@ -33,6 +33,9 @@ screen and (min-device-width: 1536px) and (max-device-width: 2048px) and (-webki
 /* Smartphones and HiDPI smartphones */
 @media screen and (max-width: 480px),
 screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+	header a[rel=home] {
+		margin-left: auto;
+	}
 	.site-description {
 		display: none;
 	}
@@ -111,6 +114,9 @@ screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-
 		display: block;
 		width: 100%;
 	}
+	.header .nav {
+		float: left;
+	}
 	.header .menu li,
 	.toggled-on li,
 	.toggled-on .children {
@@ -137,5 +143,8 @@ screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-
 	}
 	.toggled-on.nav li a {
 		padding: 8px 2px;
+	}
+	.search-toggle {
+		display: none!important;
 	}
 }

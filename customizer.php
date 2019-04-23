@@ -306,6 +306,11 @@ form input[type=submit] {
 	color: <?php echo $primary_color; ?>;
 	background: <?php echo $primary_color_lighter; ?>;
 }
+.searchform input[type=text],
+.searchform input[type=text]:focus,
+.searchform input[type=submit] {
+	color: <?php echo $secondary_color; ?>;
+}
 </style>
 <?php
 	}

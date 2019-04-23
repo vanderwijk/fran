@@ -20,38 +20,32 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-	<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+	<header class="header" id="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 		<div class="branding" id="branding">
-			<div class="row">
-				<div class="col">
-					<div class="block">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 if ( has_custom_logo() ) { ?>
-							<img src="<?php echo esc_url( $logo[0] ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="logo" />
+				<img src="<?php echo esc_url( $logo[0] ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="logo" />
 <?php } else if ( is_singular() ) { ?>
-							<h2 class="site-title"><?php bloginfo( 'name' ); ?></h2>
+				<h2 class="site-title"><?php bloginfo( 'name' ); ?></h2>
 <?php } else { ?>
-							<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 <?php } ?>
-						</a>
-						<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
-					</div>
-				</div>
-			</div>
+			</a>
+			<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
 		</div>
-		<div class="navigation" id="navigation">
-			<div class="row">
-				<div class="col">
-					<div class="block">
-						<button class="menu-toggle" id="menu-toggle"><?php _e( 'Menu', 'fran' ); ?></button>
-<?php if ( !get_theme_mod ( 'show_search' ) == '' ) { ?>
-						<form class="searchform" method="get" action="<?php echo home_url(); ?>/">
-							<input type="text" placeholder="<?php _e('Search', 'fran'); ?>" name="s" />
-							<input type="submit" value="&#xf179;" />
-						</form>
+		<button class="menu-toggle" id="menu-toggle"><?php _e( 'Menu', 'fran' ); ?></button>
+		<nav class="nav" id="nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+			<?php wp_nav_menu( array( 'theme_location' => 'header', 'container' => false ) ); ?>
+		</nav>
+		<?php if ( !get_theme_mod ( 'show_search' ) == '' ) { ?>
+			<form class="searchform" id="searchform" method="get" action="<?php echo home_url(); ?>/">
+				<fieldset>
+					<input type="text" placeholder="<?php _e('Search', 'fran'); ?>" name="s" />
+					<input type="submit" value="&#xf179;" />
+				</fieldset>
+			</form>
 <?php } ?>
 <?php if ( !get_theme_mod ( 'show_login' ) == '' ) {
 	if ( is_user_logged_in() ) { ?>
@@ -60,12 +54,5 @@ if ( has_custom_logo() ) { ?>
 		<a href="<?php echo wp_login_url( get_permalink() ); ?>" title="<?php _e('Login', 'fran'); ?>" class="login-logout-link"><?php _e('Login', 'fran'); ?></a>
 	<?php }
 } ?>
-						<nav class="nav" id="nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-							<?php wp_nav_menu( array( 'theme_location' => 'header', 'container' => false ) ); ?>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
 	</header>
-	<div class="main" role="main">
+	<div class="main" id="main" role="main">

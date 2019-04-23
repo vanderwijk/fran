@@ -6,6 +6,15 @@ jQuery(document).ready(function($) {
 	// Open menu toggle on click
 	$( '#menu-toggle' ).on( 'click', function() {
 		$( '#nav' ).toggleClass( 'toggled-on' );
+		$( '#searchform' ).toggle();
+	});
+
+	// Open search toggle on click
+	$( '.search-toggle a' ).on( 'click', function() {
+		$( this ).toggleClass('close');
+		$( '#searchform' ).toggle();
+		$( '#searchform input[name=s]' ).focus();
+		event.preventDefault();
 	});
 
 	// Scroll to top link
@@ -16,12 +25,12 @@ jQuery(document).ready(function($) {
 });
 
 // Headroom
-var headroomHeight = document.getElementById('branding').clientHeight;
-var headroom  = new Headroom( document.getElementById('branding'), {
+var headroomHeight = document.getElementById('header').clientHeight;
+var headroom = new Headroom( document.getElementById('header'), {
 	"offset": headroomHeight,
 	"tolerance": 5
 });
 headroom.init();
 
 // Calculate padding on element below headroom to allow for flexible height
-document.getElementById("navigation").style.padding = headroomHeight + "px 0 0 0";
+document.getElementById("main").style.padding = headroomHeight + "px 0 0 0";

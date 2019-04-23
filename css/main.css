@@ -84,6 +84,12 @@ html .searchform {
 	list-style: none;
 	margin: 0;
 }
+@media screen and (min-width: 480px) {
+	html .header .nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+}
 .header .nav li {
 	float: left;
 	position: relative; /* Remove for full-width menu */

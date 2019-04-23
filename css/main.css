@@ -5,6 +5,10 @@ header {
 }
 .branding {
 	background: #3f51b5; /* customize - primary */
+	display: flex;
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 10px;
 	width: 100%;
 	z-index: 5;
 }
@@ -53,8 +57,11 @@ header {
 	color: #3f51b5; /* customize - primary */
 	cursor: pointer;
 	float: left;
+	left: 10px;
 	line-height: 36px;
 	margin: 0;
+	position: absolute;
+	top: 10px;
 }
 .menu-toggle:before {
 	content: '\f333';
@@ -65,6 +72,13 @@ header {
 }
 .menu-toggle {
 	display: none;
+}
+html nav,
+html .searchform {
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 0 10px 10px 10px;
+	width: 100%;
 }
 .header .nav ul {
 	list-style: none;

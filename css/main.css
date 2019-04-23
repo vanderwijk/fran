@@ -95,6 +95,11 @@ html .searchform {
 	position: relative; /* Remove for full-width menu */
 	margin-left: 10px;
 }
+html .header .nav li {
+	float: none;
+	position: inherit;
+	margin-left: 0;
+}
 .header .nav li a {
 	color: #3f51b5; /* customize - primary */
 	display: block;

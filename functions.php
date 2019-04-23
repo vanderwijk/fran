@@ -53,6 +53,19 @@ if ( function_exists( 'register_nav_menus' ) ) {
 	);
 }
 
+
+// Add search menu item
+function custom_add_loginout_link( $items, $args ) {
+	if ($args->theme_location == 'header'){
+		if ( !get_theme_mod ( 'show_search' ) == '' ) {
+			$items .= '<li class="search-toggle"><a href="#">Zoeken</a></li>';
+		}
+	}
+	return $items;
+}
+
+add_filter( 'wp_nav_menu_items', 'custom_add_loginout_link', 10, 2 );
+
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
@@ -73,12 +86,12 @@ if ( ! isset( $content_width ) ) $content_width = 980;
 
 // Custom logo
 function fran_custom_logo_setup() {
-    $defaults = array(
-        'flex-height' => true,
-        'flex-width'  => true,
-        'header-text' => array( 'site-title', 'site-description' ),
-    );
-    add_theme_support( 'custom-logo', $defaults );
+	$defaults = array(
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-description' ),
+	);
+	add_theme_support( 'custom-logo', $defaults );
 }
 add_action( 'after_setup_theme', 'fran_custom_logo_setup' );
 
@@ -218,5 +231,5 @@ add_action( 'wp_head', 'ad_ob_end_flush', 100 );
 function fran_remove_recent_comments_style() {  
 	global $wp_widget_factory;  
 	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );  
-}  
+}
 add_action( 'widgets_init', 'fran_remove_recent_comments_style' );

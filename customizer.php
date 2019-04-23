@@ -286,10 +286,6 @@ form input[type=submit] {
 .header .menu li a:focus {
 	border-bottom-color: <?php echo $secondary_color; ?>;
 }
-.menu-toggle,
-.header .nav li a {
-	color: <?php echo $primary_color; ?>;
-}
 .content a {
 	color: <?php echo $primary_color; ?>;
 	border-color: <?php echo $primary_color; ?>;

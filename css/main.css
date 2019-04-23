@@ -1,7 +1,6 @@
 /* Header
 ----------------------------------------------------------------------------------------------------*/
-header {
-	transition: all .5s ease-in-out;
+.header {
 	background: #3f51b5; /* customize - primary */
 }
 .branding {

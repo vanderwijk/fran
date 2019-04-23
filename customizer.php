@@ -249,6 +249,7 @@ a,
 .searchform input {
 	color: <?php echo $primary_color; ?>; 
 }
+.header,
 .main .call-to-action,
 .header .nav .sub-menu,
 .header .nav .children,
@@ -268,7 +269,6 @@ form input[type=submit] {
 	border-color: <?php echo $primary_color_light; ?>;
 	color: <?php echo $primary_color; ?>; 
 }
-.header,
 .wp-caption,
 .category-list li a:active { 
 	background-color: <?php echo $primary_color_light; ?>; 

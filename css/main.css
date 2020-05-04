@@ -789,9 +789,13 @@ form input[type=submit]:active {
 	top: 1px;
 }
 form input[type=text],
-form input[type=password] {
+form input[type=password],
+form input[type=email] {
 	border: 1px solid #888;
 	padding: 3px 5px 5px 5px;
+}
+form select {
+	border: 1px solid #888;
 }
 /* Responsive oEmbed videos
 ----------------------------------------------------------------------------------------------------*/

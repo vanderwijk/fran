@@ -3,6 +3,18 @@
 // Load translation
 function fran_theme_setup(){
 	load_theme_textdomain( 'fran', get_template_directory() . '/languages' );
+	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'title-tag' );
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'html5', array( 'widgets', 'script', 'style' ) );
+	add_theme_support( 'menus' );
+	if ( function_exists( 'register_nav_menus' ) ) {
+		register_nav_menus(
+			array(
+				'header' => 'Header',
+			)
+		);
+	}
 }
 add_action( 'after_setup_theme', 'fran_theme_setup' );
 
@@ -43,17 +55,6 @@ function fran_scripts_styles () {
 }
 add_action( 'wp_enqueue_scripts', 'fran_scripts_styles' );
 
-// Menus
-add_theme_support( 'menus' );
-if ( function_exists( 'register_nav_menus' ) ) {
-	register_nav_menus(
-		array(
-			'header' => 'Header',
-		)
-	);
-}
-
-
 // Add search menu item
 function custom_add_loginout_link( $items, $args ) {
 	if ($args->theme_location == 'header'){
@@ -63,13 +64,7 @@ function custom_add_loginout_link( $items, $args ) {
 	}
 	return $items;
 }
-
 add_filter( 'wp_nav_menu_items', 'custom_add_loginout_link', 10, 2 );
-
-add_theme_support( 'automatic-feed-links' );
-add_theme_support( 'title-tag' );
-add_theme_support( 'post-thumbnails' );
-add_theme_support( 'html5', array( 'widgets' ) );
 
 // Thumbnails
 if ( function_exists( 'add_image_size' ) ) { 

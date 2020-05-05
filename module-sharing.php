@@ -48,7 +48,7 @@
 		</a>
 	</li>
 	<li class="show-on-smartphone">
-		<a href="whatsapp://send?text=<?php _e( 'Take a look at this', 'fran'); ?>:%20<?php the_title_attribute(); ?>%20<?php the_permalink(); ?>"
+		<a href="whatsapp://send?text=<?php echo rawurlencode( __( 'Take a look at this', 'fran') ); ?>:%20<?php the_title_attribute(); ?>%20<?php the_permalink(); ?>"
 			rel="nofollow" 
 			title="<?php _e( 'Share this via WhatsApp', 'fran'); ?>" 
 			onClick="ga('send', 'event', 'share', 'whatsapp');" 

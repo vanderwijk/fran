@@ -222,7 +222,7 @@ class fran_customizer {
 			$primary_color_lighter = colourBrightness($primary_color,$lighter);
 		}
 		?>
-<style type="text/css">
+<style>
 <?php if ( ( get_theme_mod ( 'show_author' ) == '' )  && ( get_theme_mod ( 'show_date' ) == '' ) ) { ?>
 .single .entry-meta {
 	display: none;

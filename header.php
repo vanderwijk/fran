@@ -11,7 +11,7 @@
 	╰──────────────────────────────────────────╯
 -->
 <meta charset='<?php bloginfo( 'charset' ); ?>' />
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 <meta name='application-name' content='<?php bloginfo('name'); ?>' />
 <meta name='apple-mobile-web-app-title' content='<?php bloginfo('name'); ?>' />
 <meta name='theme-color' content='<?php echo get_theme_mod('primary_color'); ?>' />
@@ -41,13 +41,13 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'header', 'container' => false ) ); ?>
 				</nav>
 				<?php if ( !get_theme_mod ( 'show_search' ) == '' ) { ?>
-					<form class="searchform" id="searchform" method="get" action="<?php echo home_url(); ?>/">
+				<form class="searchform" id="searchform" method="get" action="<?php echo home_url(); ?>/">
 					<div class="searchwrap">
 						<input type="text" placeholder="<?php _e('Search', 'fran'); ?>" name="s" />
 						<input type="submit" value="&#xf179;" />
 					</div>
 				</form>
-			<?php } ?>
+				<?php } ?>
 		</div>
 		<?php if ( !get_theme_mod ( 'show_login' ) == '' ) {
 			if ( is_user_logged_in() ) { ?>

@@ -392,6 +392,10 @@ ul.header .nav .focus > ul,
 	.header .navigation .sub-menu a {
 		color: #404040;
 	}
+	header .navigation .sub-menu .current-menu-item a {
+		background-color: var(--primary-color-lighter);
+		border-color: transparent;
+	}
 	.header .navigation .sub-menu li:hover > a {
 		color: var(--secondary-color);
 	}

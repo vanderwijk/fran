@@ -130,6 +130,7 @@ html .header .nav li {
 	line-height: 1em;
 	padding: 6px 5px;
 	text-decoration: none;
+	white-space: nowrap;
 	border-bottom: 2px solid transparent;
 	border-top: 2px solid transparent;
 }

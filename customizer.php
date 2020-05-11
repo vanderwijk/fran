@@ -213,8 +213,8 @@ class fran_customizer {
 			return $hash.$hex;
 		}
 
-		$primary_color = get_theme_mod('primary_color');
-		$secondary_color = get_theme_mod('secondary_color');
+		$primary_color = get_theme_mod('primary_color', '#3f51b5');
+		$secondary_color = get_theme_mod('secondary_color', '#ff4081');
 		$light = 0.2; // 50% brighter
 		$lighter = 0.1;
 		if ( get_theme_mod('primary_color') ) {
@@ -244,6 +244,7 @@ class fran_customizer {
   --primary-color: <?php echo $primary_color; ?>;
   --primary-color-light: <?php echo $primary_color_light; ?>;
   --primary-color-lighter: <?php echo $primary_color_lighter; ?>;
+  --secondary-color: <?php echo $secondary_color; ?>;
 }
 
 h1,

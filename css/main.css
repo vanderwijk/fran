@@ -305,7 +305,7 @@ ul.header .nav .focus > ul,
 .searchform input[type=search] {
 	border: none;
 	color: #404040;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 14px;
 	margin: 2px 1px 2px 2px;
 	padding: 5px 7px;
@@ -313,6 +313,11 @@ ul.header .nav .focus > ul,
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
 	width: 100%;
+}
+@media screen and (min-width: 480px) {
+	.searchform input[type=search] {
+		font-size: 14px;
+	}
 }
 .searchform input[type=search]::placeholder {
 	color: #b6b6b6;

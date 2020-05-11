@@ -99,10 +99,6 @@ screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-
 	.menu-toggle {
 		display: block;
 	}
-	.header .nav {
-		display: none;
-		margin: 0;
-	}
 	.toggled-on .menu-toggle:after {
 		-webkit-font-smoothing: antialiased;
 		font: normal 20px/0 'dashicons';
@@ -113,9 +109,6 @@ screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-
 	.toggled-on.nav > ul {
 		display: block;
 		width: 100%;
-	}
-	.header .nav {
-		float: left;
 	}
 	.header .menu li,
 	.toggled-on li,

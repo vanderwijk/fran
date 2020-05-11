@@ -35,26 +35,25 @@
 					<?php } ?>
 				</a>
 			</div>
+			<button class="menu-toggle" id="menu-toggle"><?php _e( 'Menu', 'fran' ); ?></button>
 			<div class="navigation">
-				<button class="menu-toggle" id="menu-toggle"><?php _e( 'Menu', 'fran' ); ?></button>
 				<nav class="nav" id="nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<?php wp_nav_menu( array( 'theme_location' => 'header', 'container' => false ) ); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'header', 'container' => false, 'menu_id' => 'menu-header', 'menu_class' => 'menu-header' ) ); ?>
+					<?php if ( !get_theme_mod ( 'show_login' ) == '' ) { ?>
+						<ul class="menu-utilities">
+						<?php if ( is_user_logged_in() ) { ?>
+							<li class="login-logout-link"><a href="<?php echo wp_logout_url(); ?>" title="<?php _e('Logout', 'fran'); ?>"><?php _e('Logout', 'fran'); ?></a></li>
+						<?php } else { ?>
+							<li><a href="<?php echo wp_login_url( get_permalink() ); ?>" title="<?php _e('Login', 'fran'); ?>" class="login-logout-link"><?php _e('Login', 'fran'); ?></a></li>
+						<?php } ?>
+						</ul>
+					<?php } ?>
 				</nav>
-				<?php if ( !get_theme_mod ( 'show_search' ) == '' ) { ?>
-				<form class="searchform" id="searchform" method="get" action="<?php echo home_url(); ?>/">
-					<div class="searchwrap">
-						<input type="text" placeholder="<?php _e('Search', 'fran'); ?>" name="s" />
-						<input type="submit" value="&#xf179;" />
-					</div>
-				</form>
-				<?php } ?>
+				<?php if ( !get_theme_mod ( 'show_search' ) == '' ) { 
+					get_search_form();
+				} ?>
+			</div>
 		</div>
-		<?php if ( !get_theme_mod ( 'show_login' ) == '' ) {
-			if ( is_user_logged_in() ) { ?>
-				<a href="<?php echo wp_logout_url(); ?>" title="<?php _e('Logout', 'fran'); ?>" class="login-logout-link"><?php _e('Logout', 'fran'); ?></a>
-			<?php } else { ?>
-				<a href="<?php echo wp_login_url( get_permalink() ); ?>" title="<?php _e('Login', 'fran'); ?>" class="login-logout-link"><?php _e('Login', 'fran'); ?></a>
-			<?php }
-		} ?>
+
 	</header>
-	<div class="main" id="main" role="main">
+	<main class="main" id="main" role="main">

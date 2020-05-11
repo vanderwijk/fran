@@ -1,4 +1,4 @@
-	</div>
+</main>
 	<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 		<div class="breadcrumbs">
 			<div class="row">

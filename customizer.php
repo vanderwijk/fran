@@ -239,6 +239,13 @@ class fran_customizer {
 	display: none;
 }
 <?php } ?>
+
+:root {
+  --primary-color: <?php echo $primary_color; ?>;
+  --primary-color-light: <?php echo $primary_color_light; ?>;
+  --primary-color-lighter: <?php echo $primary_color_lighter; ?>;
+}
+
 h1,
 h2,
 h3,
@@ -249,7 +256,6 @@ a,
 .searchform input {
 	color: <?php echo $primary_color; ?>; 
 }
-.header,
 .main .call-to-action,
 .header .nav .sub-menu,
 .header .nav .children,
@@ -257,7 +263,6 @@ ul.nav-menu ul a:hover,
 .nav-menu ul ul a:hover,
 ul.nav-menu ul a:focus,
 .nav-menu ul ul a:focus,
-.branding,
 .main button,
 .main .gform_wrapper .gform_footer input.button,
 .main .gform_wrapper .gform_footer input[type="submit"],
@@ -291,11 +296,11 @@ form input[type=submit] {
 	border-color: <?php echo $primary_color; ?>;
 }
 .one-third .entry-meta,
-.searchform,
-.searchform input {
+/*.searchform,
+.searchform input */ {
 	background: <?php echo $primary_color_lighter; ?>;
 }
-.searchform {
+/*.searchform {
 	border-color: <?php echo $primary_color_lighter; ?>;
 }
 .login-logout-link {
@@ -306,7 +311,7 @@ form input[type=submit] {
 .searchform input[type=text]:focus,
 .searchform input[type=submit] {
 	color: <?php echo $secondary_color; ?>;
-}
+}*/
 </style>
 <?php
 	}

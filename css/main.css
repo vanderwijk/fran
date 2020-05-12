@@ -65,6 +65,7 @@
 @media screen and (min-width: 480px) {
 	.header {
 		justify-content: center;
+		flex-wrap: nowrap;
 	}
 	.branding {
 		max-width: 255px;

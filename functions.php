@@ -28,10 +28,13 @@ function fran_scripts_styles () {
 		wp_enqueue_style( 'reset', get_template_directory_uri() . '/css/reset.css', array(), wp_get_theme()->get('Version') );
 		wp_enqueue_style( 'grid', get_template_directory_uri() . '/css/grid.css', array(), wp_get_theme()->get('Version') );
 		wp_enqueue_style( 'roboto', get_template_directory_uri() . '/css/roboto.css', array(), wp_get_theme()->get('Version') );
+		wp_enqueue_style( 'hamburgers', get_template_directory_uri() . '/node_modules/hamburgers/dist/hamburgers.min.css', array(), wp_get_theme()->get('Version') );
 		wp_enqueue_style( 'dashicons' );
 		wp_enqueue_style( 'typography', get_template_directory_uri() . '/css/typography.css', array(), wp_get_theme()->get('Version') );
 		wp_enqueue_style( 'widget', get_template_directory_uri() . '/css/widget.css', array(), wp_get_theme()->get('Version') );
 		wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css', array(), wp_get_theme()->get('Version') );
+
+
 		if ( is_single() ) {
 			wp_enqueue_style( 'comments', get_template_directory_uri() . '/css/comments.css', array(), wp_get_theme()->get('Version') );
 		}

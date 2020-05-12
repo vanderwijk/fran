@@ -96,27 +96,6 @@ screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-
 	.pagination .previouspostslink {
 		display: none;
 	}
-	.menu-toggle {
-		display: block;
-	}
-	.toggled-on .menu-toggle:after {
-		-webkit-font-smoothing: antialiased;
-		font: normal 20px/0 'dashicons';
-		content: "\f333";
-		vertical-align: 2px;
-	}
-	.toggled-on.nav,
-	.toggled-on.nav > ul {
-		display: block;
-		width: 100%;
-	}
-	.header .menu li,
-	.toggled-on li,
-	.toggled-on .children {
-		display: block;
-		float: none;
-		margin-left: 0;
-	}
 	.toggled-on.nav li > ul {
 		background-color: transparent;
 		display: block;

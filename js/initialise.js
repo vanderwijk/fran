@@ -17,6 +17,19 @@ jQuery(document).ready(function($) {
 
 });
 
+
+// Look for .hamburger
+var hamburger = document.querySelector(".hamburger");
+var body = document.querySelector("body");
+// On click
+hamburger.addEventListener("click", function() {
+	// Toggle class "is-active"
+	hamburger.classList.toggle("is-active");
+	body.classList.toggle("show-navigation");
+	// Do something else, like open/close menu
+});
+
+
 // Headroom
 var headroomHeight = document.getElementById('header').clientHeight;
 var headroom = new Headroom( document.getElementById('header'), {

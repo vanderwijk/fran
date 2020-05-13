@@ -45,6 +45,9 @@ function fran_scripts_styles () {
 		wp_register_script( 'headroom', get_template_directory_uri() . '/js/headroom.min.js', array( 'jquery' ), '0.7.0', true );
 		wp_enqueue_script( 'headroom' );
 
+		wp_register_script( 'bodyscrolllock', get_template_directory_uri() . '/node_modules/body-scroll-lock/lib/bodyScrollLock.min.js', array(), wp_get_theme()->get('Version'), true );
+		wp_enqueue_script( 'bodyscrolllock' );
+
 		wp_register_script( 'masonry-init', get_template_directory_uri() . '/js/masonry-init.js', array( 'masonry' ), wp_get_theme()->get('Version'), true );
 		if ( is_front_page() || is_archive() || is_search() ) {
 			wp_enqueue_script( 'masonry' );

@@ -8,7 +8,7 @@
 		<div class="thumbnail">
 			<?php if (has_post_thumbnail( $post ->ID ) ){ ?>
 			<?php $image=wp_get_attachment_image_src( get_post_thumbnail_id( $post ->ID ), 'archive' ); ?>
-			<img src="<?php echo $image[0]; ?>" alt="<?php the_title_attribute(); ?>" />
+			<img src="<?php echo $image[0]; ?>" alt="<?php the_title_attribute(); ?>" loading="lazy" />
 			<?php }; ?>
 		</div>
 		</a>

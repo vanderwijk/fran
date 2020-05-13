@@ -12,22 +12,28 @@ jQuery(document).ready(function($) {
 
 });
 
-
-// Open responsive navigation with hamburger
-var hamburger = document.querySelector('.hamburger');
 var body = document.querySelector('body');
+var main = document.getElementById('main');
+var header = document.querySelector('.header');
+var hamburger = document.querySelector('.hamburger');
+
+// Open responsive navigation with hamburger and lock scroll on body
 hamburger.addEventListener('click', function() {
 	hamburger.classList.toggle('is-active');
 	body.classList.toggle('show-navigation');
+	bodyScrollLock.enableBodyScroll(header);
+	if (hamburger.classList.contains('is-active')){
+		bodyScrollLock.disableBodyScroll(header);
+	}
 });
 
 // Headroom
-var headroomHeight = document.querySelector('.header').clientHeight;
-var headroom = new Headroom( document.querySelector('.header'), {
+var headroomHeight = header.clientHeight;
+var headroom = new Headroom( header, {
 	'offset': headroomHeight,
 	'tolerance': 5
 });
 headroom.init();
 
 // Calculate padding on element below headroom to allow for flexible height
-document.getElementById('main').style.padding = headroomHeight + 'px 0 0 0';
+main.style.padding = headroomHeight + 'px 0 0 0';

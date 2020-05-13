@@ -49,6 +49,7 @@
 .header .hamburger.is-active .hamburger-inner:after,
 .header .hamburger.is-active .hamburger-inner:before {
 	background-color: white;
+	width: 30px;
 }
 .branding {
 	padding: 10px 20px 10px 10px;
@@ -94,10 +95,29 @@
 	display: inline-block;
 	white-space: nowrap;
 }
+.site-title {
+	color: #fff;
+	display: inline-block;
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 1em;
+	margin: 0;
+	text-transform: uppercase;
+	transition: all 250ms ease-in-out;
+}
+.headroom--not-top .site-title {
+	font-size: 23px;
+}
+.site-description {
+	margin: 20px 0 0 0;
+	color: var(--primary-color-light);
+	font-weight: 400;
+	font-size: 1em;
+	width: 100%;
+}
 .logo {
-	-webkit-transition: all 250ms ease-in-out;
-	-moz-transition: all 250ms ease-in-out;
-	-ms-transition: all 250ms ease-in-out;
+	max-height: 3.125em; /* 50px */
+	width: auto;
 	transition: all 250ms ease-in-out;
 }
 .headroom--not-top .logo {
@@ -179,15 +199,17 @@ html .header .nav li {
 .header .nav li .children a:after {
 	content: '';
 }
-.header .nav .sub-menu ul,
-.header .nav .children ul {
-	left: 100%;
+
+.header .nav .sub-menu,
+.header .nav .children {
+	padding-left: 10px;
 	top: 0;
 }
 @media screen and (min-width: 480px) {
-	ul.header .nav ul a,
-	.header .nav ul ul a {
-
+	.header .nav .sub-menu ul,
+	.header .nav .children ul {
+		left: 100%;
+		top: 0;
 	}
 }
 ul.header .nav li:hover > ul,
@@ -219,26 +241,7 @@ ul.header .nav .focus > ul,
 .header {
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
-.site-title {
-	color: #fff;
-	display: inline-block;
-	font-size: 2em; /* 32px */
-	font-weight: 500;
-	line-height: 1em;
-	margin: 0;
-	text-transform: uppercase;
-}
-.site-description {
-	margin: .625em 0 0 0; /* 20px 0 0 0 */	
-	color: var(--primary-color-light);
-	font-weight: 400;
-	font-size: 1em;
-	width: 100%;
-}
-.logo {
-	max-height: 3.125em; /* 50px */
-	width: auto;
-}
+
 
 /* Login / logout
 ----------------------------------------------------------------------------------------------------*/

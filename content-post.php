@@ -7,7 +7,7 @@
 						<div class="thumbnail">
 							<a href="<?php the_permalink(); ?>" rel="bookmark">
 								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post ->ID ), 'single' ); ?>
-								<img src="<?php echo $image[0]; ?>" alt="<?php the_title_attribute(); ?>" />
+								<img src="<?php echo $image[0]; ?>" alt="<?php the_title_attribute(); ?>" loading="lazy" />
 							</a>
 						</div>
 					<?php }; ?>

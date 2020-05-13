@@ -17,14 +17,10 @@ var main = document.getElementById('main');
 var header = document.querySelector('.header');
 var hamburger = document.querySelector('.hamburger');
 
-// Open responsive navigation with hamburger and lock scroll on body
+// Open responsive navigation with hamburger
 hamburger.addEventListener('click', function() {
 	hamburger.classList.toggle('is-active');
 	body.classList.toggle('show-navigation');
-	bodyScrollLock.enableBodyScroll(header);
-	if (hamburger.classList.contains('is-active')){
-		bodyScrollLock.disableBodyScroll(header);
-	}
 });
 
 // Headroom

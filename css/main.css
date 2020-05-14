@@ -1,3 +1,8 @@
+body.show-navigation {
+	height: 100%;
+overflow-y: hidden
+}
+
 /* Header
 ======================================== */
 .headroom {
@@ -88,6 +93,17 @@
 		display: none!important;
 	}
 }
+/*
+.line {
+	background: linear-gradient(to left,#42e0b7,#33bbc4);
+	width: 0;
+	height: 6px;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+*/
 
 /* Branding
 ======================================== */
@@ -107,6 +123,11 @@
 }
 .headroom--not-top .site-title {
 	font-size: 23px;
+}
+@media screen and (min-width: 480px) {
+	.headroom--not-top .site-title {
+		font-size: 32px;
+	}
 }
 .site-description {
 	margin: 20px 0 0 0;
@@ -206,10 +227,19 @@ html .header .nav li {
 	top: 0;
 }
 @media screen and (min-width: 480px) {
-	.header .nav .sub-menu ul,
-	.header .nav .children ul {
+	.header .navigation .sub-menu a {
+		color: #404040;
+		padding: 6px 10px;
+	}
+	.header .nav .sub-menu,
+	.header .nav .children {
+		padding-left: 0;
+		left: auto;
+		top: auto;
+	}
+	.header .nav .sub-menu .sub-menu {
 		left: 100%;
-		top: 0;
+		top: -2px;
 	}
 }
 ul.header .nav li:hover > ul,
@@ -372,9 +402,7 @@ ul.header .nav .focus > ul,
 		margin-right: 0;
 		width: 100%;
 	}
-	.header .navigation .sub-menu a {
-		color: #404040;
-	}
+
 	header .navigation .sub-menu .current-menu-item a {
 		background-color: var(--primary-color-lighter);
 		border-color: transparent;

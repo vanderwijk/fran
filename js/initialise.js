@@ -9,7 +9,15 @@ jQuery(document).ready(function($) {
 	$('#scroll-up').click(function() {
 		$('html, body').animate( { scrollTop: 0 }, 1000 );
 	});
-
+/*
+	$(window).scroll(function() {
+		var t = $(window).scrollTop()
+			, o = $(document).height()
+			, i = $(window).height()
+			, n = t / (o - i) * 100;
+		$(".line").css("width", n + "%")
+	});
+*/
 });
 
 var body = document.querySelector('body');
@@ -32,4 +40,4 @@ var headroom = new Headroom( header, {
 headroom.init();
 
 // Calculate padding on element below headroom to allow for flexible height
-main.style.padding = headroomHeight + 'px 0 0 0';
+main.style.padding = ( headroomHeight + 10 ) + 'px 0 0 0';

@@ -39,7 +39,7 @@
 				<span class="hamburger-inner"></span>
 			</span>
 		</button>
-		<div class="navigation">
+
 			<nav class="nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 				<?php wp_nav_menu( array( 'theme_location' => 'header', 'container' => false, 'menu_id' => 'menu-header', 'menu_class' => 'menu-header' ) ); ?>
 				<?php if ( !get_theme_mod ( 'show_login' ) == '' ) { ?>
@@ -51,10 +51,11 @@
 					<?php } ?>
 					</ul>
 				<?php } ?>
-			</nav>
+			
 			<?php if ( !get_theme_mod ( 'show_search' ) == '' ) { 
 				get_search_form();
 			} ?>
-		</div>
+			</nav>
+
 	</header>
 	<main class="main" id="main" role="main">

@@ -62,7 +62,7 @@ overflow-y: hidden
 	order: 2;
 	width: 75%;
 }
-.navigation {
+.header .nav {
 	display: none;
 	width: 100%;
 	order: 3;
@@ -78,7 +78,7 @@ overflow-y: hidden
 		order: 2;
 		padding: 20px;
 	}
-	.navigation {
+	.header .nav {
 		width: 75%;
 		display: flex;
 		max-width: 765px;
@@ -148,19 +148,19 @@ overflow-y: hidden
 
 /* Navigation
 ======================================== */
-.show-navigation .navigation {
+.show-navigation .nav {
 	display: block;
 }
-.navigation .menu-header,
-.navigation .menu-utilities {
+.nav .menu-header,
+.nav .menu-utilities {
 	margin-bottom: 10px;
 }
-.header ul {
+.nav ul {
 	list-style: none;
 	margin: 0;
 }
 @media screen and (min-width: 480px) {
-	html .header ul {
+	html .nav ul {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -227,7 +227,7 @@ html .header .nav li {
 	top: 0;
 }
 @media screen and (min-width: 480px) {
-	.header .navigation .sub-menu a {
+	.header .nav .sub-menu a {
 		color: #404040;
 		padding: 6px 10px;
 	}
@@ -391,30 +391,30 @@ ul.header .nav .focus > ul,
 		display: none;
 	}
 
-	html .header .navigation .nav ul {
+	html .header .nav ul {
 		justify-content: flex-start;
 	}
-	html .header .navigation .nav li {
+	html .header .nav li {
 		margin-right: 20px;
 		position: relative;
 	}
-	html .header .navigation .nav li li {
+	html .header .nav li li {
 		margin-right: 0;
 		width: 100%;
 	}
 
-	header .navigation .sub-menu .current-menu-item a {
+	header .nav .sub-menu .current-menu-item a {
 		background-color: var(--primary-color-lighter);
 		border-color: transparent;
 	}
-	.header .navigation .sub-menu li:hover > a {
+	.header .nav .sub-menu li:hover > a {
 		color: var(--secondary-color);
 	}
-	.header .navigation li.menu-item-has-children:hover > a,
-	.header .navigation .sub-menu li:hover > a {
+	.header .nav li.menu-item-has-children:hover > a,
+	.header .nav .sub-menu li:hover > a {
 		border-color: transparent;
 	}
-	html .header .navigation .sub-menu {
+	html .header .nav .sub-menu {
 		border-radius: 3px;
 		background-color: #fff;
 		border: 2px solid var(--secondary-color);

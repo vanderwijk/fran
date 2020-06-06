@@ -12,7 +12,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="https://twitter.com/home?status=<?php the_title_attribute(); ?>%20<?php the_permalink(); ?>"
+		<a href="https://twitter.com/share?text=<?php the_title_attribute(); ?>&url=<?php the_permalink(); ?>"
 			title="<?php _e( 'Share this on Twitter', 'fran'); ?>" 
 			rel="external nofollow" 
 			onClick="ga('send', 'event', 'share', 'twitter');" 

@@ -68,4 +68,6 @@
 				</div>
 			</div>
 
+			<?php get_template_part( 'module-related', get_post_format() ); ?>
+
 <?php } ?>
